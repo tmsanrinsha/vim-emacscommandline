@@ -72,7 +72,11 @@ function! <SID>DeleteChar()
     return l:ret
 endfunction
 
-cnoremap <BS> <C-\>e<SID>BackwardDeleteChar()<CR>
+" macvimだと問題あり
+if !has('gui_macvim')
+    cnoremap <BS> <C-\>e<SID>BackwardDeleteChar()<CR>
+endif
+cnoremap <C-H> <C-\>e<SID>BackwardDeleteChar()<CR>
 function! <SID>BackwardDeleteChar()
     call <SID>saveUndoHistory(getcmdline(), getcmdpos())
     if (getcmdpos() < 2)
