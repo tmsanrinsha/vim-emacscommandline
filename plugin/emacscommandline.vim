@@ -4,7 +4,7 @@ cnoremap <C-B> <Left>
 cnoremap <C-F> <Right>
 cnoremap <C-P> <Up>
 cnoremap <C-N> <Down>
-cnoremap <M-r> <C-F>?
+" cnoremap <M-r> <C-F>?
 
 " Maps to old shortcuts using Ctrl-O as a prefix
 cnoremap <C-O><C-A>      <C-A>
